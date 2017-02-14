@@ -1,10 +1,10 @@
 <?php
     class Anagram
     {
-        function compareWords($input)
+        function compareWords($input_word, $list_of_words)
         {
-            $first_word_letter_array = str_split($input[0]);
-            $all_words_compare_array = explode(",", $input[1]);
+            $first_word_letter_array = str_split($input_word);
+            $all_words_compare_array = explode(",", $list_of_words);
             $words_matching_array = array();
 
             foreach ($all_words_compare_array as $word) {

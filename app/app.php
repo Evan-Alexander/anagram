@@ -6,7 +6,7 @@
     Debug::enable();
 
     $app = new Silex\Application();
-    
+
     $app['debug']=true;
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array(
@@ -17,10 +17,10 @@
         return $app['twig']->render('form.html.twig');
     });
 
-    $app->get("/view_title_case", function() use($app) {
-        $input_time = new Clock;
-        $difference_in_degrees = $input_time->makeClockAngle($_GET['time']);
-        return $app['twig']->render('angle_result.html.twig', array('result' => $difference_in_degrees));
+    $app->get("/view_results", function() use($app) {
+        $input_words = new Anagram;
+        $find_anagrams = $input_words->compareWords($_GET['word'], $_GET['list']);
+        return $app['twig']->render('results.html.twig', array('result' => $find_anagrams));
     });
     return $app;
 ?>
