@@ -1,6 +1,6 @@
 # PHP Anagram Webpage
 
-#### _A webpage that shows if a word is an anagram, 13 February 2017_
+#### _A webpage that shows if a word is an anagram, 14 February 2017_
 
 #### By _**Erica Wright & Jason Brown**_
 
@@ -22,6 +22,7 @@ This webpage will allow the user to enter a word and a list of words and will ma
 | Enter a word and single word to compare | "bear" and "toast" | "This is not an anagram" |
 | Enter a word and single word to compare | "dear" and "read" | "This is an anagram" |
 | Enter a word and a list of words to compare | "dear" and "read, bowl, toast, red, dare" | "These words are anagrams: read, dare" |
+| Enter a word and a list of words to compare | "dear" and "bowl, toast, red" | "None of these words are anagrams" |
 | Enter a word and a list of words to compare | "dear" and "read, bowl, toast, red, dare" | "These words are anagrams: read, dare, red" |
 
 ## Known Bugs

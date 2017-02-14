@@ -14,7 +14,7 @@
             $result = $test_word->compareWords($input);
 
             //Assert
-            $this->assertEquals("This is not an anagram", $result);
+            $this->assertEquals("None of these words are anagrams", $result);
 
         }
 
@@ -28,7 +28,35 @@
             $result = $test_word->compareWords($input);
 
             //Assert
-            $this->assertEquals("This is an anagram", $result);
+            $this->assertEquals("These words are anagrams: read", $result);
+
+        }
+
+        function test_anagram_multiples()
+        {
+            //Arrange
+            $test_word = new Anagram;
+            $input = array("dear", "read, bowl, toast, red, dare");
+            //Act
+
+            $result = $test_word->compareWords($input);
+
+            //Assert
+            $this->assertEquals("These words are anagrams: read, dare", $result);
+
+        }
+
+        function test_anagram_multiple_no()
+        {
+            //Arrange
+            $test_word = new Anagram;
+            $input = array("dear", "bowl, toast, red");
+            //Act
+
+            $result = $test_word->compareWords($input);
+
+            //Assert
+            $this->assertEquals("None of these words are anagrams", $result);
 
         }
     }
